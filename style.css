@@ -1643,7 +1643,7 @@ pre {
   /* Adjust hero content layout */
   .hero-content {
     flex-direction: column-reverse;
-    gap: 1rem;
+    gap: 9rem;
   }
   
   /* Window header adjustments */
