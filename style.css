@@ -1590,46 +1590,21 @@ pre {
     gap: 10px;
   }
   
-  /* Remove the logo completely */
   .logo {
-    display: none;
-  }
-  
-  /* Hero visual adjustments - combined and optimized */
-  .hero-visual {
-    width: 90%;
-    margin: 1rem auto 0;
-    padding: 0.5rem;
-  }
-  
-  .code-window {
-    width: 100%;
-    transform: scale(0.85);
-    margin: 0 auto;
-    transform-origin: center;
-  }
-  
-  .code-content {
-    padding: 0.5rem;
-  }
-  
-  .code-content pre {
-    font-size: 0.7em;
-    line-height: 1.4;
-    overflow-x: auto;
+    width: 80px;
   }
   
   .image-wrapper {
-    height: 200px;
+    height: 250px;
   }
   
   .tech-icons {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px;
   }
   
   .tech-icons i {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .skills-list {
@@ -1638,21 +1613,5 @@ pre {
   
   .footer-content {
     grid-template-columns: 1fr;
-  }
-  
-  /* Adjust hero content layout */
-  .hero-content {
-    flex-direction: column-reverse;
-    gap: 9rem;
-  }
-  
-  /* Window header adjustments */
-  .window-header {
-    padding: 0.5rem;
-  }
-  
-  .window-header .dot {
-    width: 8px;
-    height: 8px;
   }
 }
