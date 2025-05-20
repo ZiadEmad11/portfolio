@@ -1590,21 +1590,41 @@ pre {
     gap: 10px;
   }
   
+  /* Remove the logo completely */
   .logo {
-    width: 80px;
+    display: none;
+  }
+  
+  /* Hero visual adjustments */
+  .hero-visual {
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .code-window {
+    transform: scale(0.85);
+    margin: 0 auto;
+  }
+  
+  .code-content {
+    padding: 0.8rem;
+  }
+  
+  .code-content pre {
+    font-size: 0.7em;
   }
   
   .image-wrapper {
-    height: 250px;
+    height: 200px; /* Reduced from 250px */
   }
   
   .tech-icons {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
   }
   
   .tech-icons i {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Reduced from 2rem */
   }
   
   .skills-list {
@@ -1613,5 +1633,11 @@ pre {
   
   .footer-content {
     grid-template-columns: 1fr;
+  }
+  
+  /* Adjust hero content layout */
+  .hero-content {
+    flex-direction: column-reverse; /* Puts visual above text on tiny screens */
+    gap: 1rem;
   }
 }
