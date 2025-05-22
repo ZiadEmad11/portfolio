@@ -250,48 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     
-// Mobile menu toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    
-    function closeMenu() {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
-        menuOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-    
-    // Toggle menu when hamburger is clicked
-    hamburger.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        menuOverlay.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
-    });
-    
-    // Close menu when clicking on overlay
-    menuOverlay.addEventListener('click', closeMenu);
-    
-    // Close menu when clicking on any nav link (including section links)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Only close if it's a hash link (internal section link)
-            if (this.getAttribute('href').startsWith('#')) {
-                closeMenu();
-            }
-            // External links will work normally without closing menu
-        });
-    });
-    
-    // Close menu when resizing to desktop view
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            closeMenu();
-        }
-    });
-});
 
     
 
