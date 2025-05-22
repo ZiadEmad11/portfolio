@@ -249,6 +249,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    // Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+    
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
+        hamburger.innerHTML = navLinks.classList.contains('active') 
+            ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close menu when clicking on overlay
+    overlay.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close menu when clicking on a link (optional)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    });
+});
+
 
     
 
